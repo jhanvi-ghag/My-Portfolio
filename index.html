@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhanvi Ghag | Portfolio</title>
+
+    <title>Jhanvi Ghag | Personal Portfolio</title>
 
     <style>
         * {
@@ -24,10 +25,11 @@
         /* Navigation */
         header {
             background: white;
-            padding: 20px 8%;
+            padding: 18px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -36,18 +38,18 @@
 
         header h2 {
             color: #e52d87;
-            font-size: 27px;
+            font-size: 26px;
         }
 
         nav {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 20px;
         }
 
         nav a {
             text-decoration: none;
-            color: #222;
+            color: #292929;
             font-weight: bold;
             transition: 0.3s;
         }
@@ -60,17 +62,17 @@
         section {
             max-width: 1100px;
             margin: 35px auto;
-            padding: 65px 7%;
+            padding: 60px 7%;
             border-radius: 18px;
             background: white;
             box-shadow: 0 5px 20px rgba(220, 70, 140, 0.10);
             scroll-margin-top: 100px;
         }
 
-        h2 {
+        section h2 {
             color: #e52d87;
-            margin-bottom: 20px;
-            font-size: 28px;
+            font-size: 29px;
+            margin-bottom: 22px;
         }
 
         h3 {
@@ -82,23 +84,33 @@
         #home {
             background: #ffe3f0;
             text-align: center;
-            padding: 110px 7%;
+            padding: 85px 7%;
             margin-top: 28px;
         }
 
         #home h1 {
-            font-size: 42px;
             color: #c91f70;
+            font-size: 40px;
             margin-bottom: 8px;
         }
 
         #home h2 {
-            font-size: 25px;
-            margin-bottom: 18px;
+            font-size: 24px;
+            margin-bottom: 12px;
         }
 
         #home p {
             font-size: 18px;
+        }
+
+        .profile-photo {
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(220, 70, 140, 0.25);
+            margin-bottom: 20px;
         }
 
         /* About */
@@ -129,7 +141,7 @@
         .skill {
             background: #ffe3f0;
             color: #bd1d68;
-            padding: 12px 22px;
+            padding: 11px 22px;
             border-radius: 25px;
             font-weight: bold;
         }
@@ -137,7 +149,7 @@
         /* Projects */
         .project-card {
             background: #fff3f8;
-            padding: 25px;
+            padding: 24px;
             border-radius: 12px;
             margin: 18px 0;
             border-left: 5px solid #e52d87;
@@ -161,7 +173,7 @@
 
         /* Contact */
         #contact p {
-            margin: 10px 0;
+            margin: 12px 0;
         }
 
         #contact a {
@@ -184,7 +196,6 @@
             header {
                 flex-direction: column;
                 gap: 12px;
-                padding: 15px;
             }
 
             nav {
@@ -200,10 +211,6 @@
                 font-size: 30px;
             }
 
-            #home {
-                padding: 75px 7%;
-            }
-
             section {
                 margin: 20px 12px;
                 padding: 35px 7%;
@@ -214,7 +221,7 @@
 
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <header>
         <h2>Jhanvi Ghag</h2>
 
@@ -228,18 +235,27 @@
         </nav>
     </header>
 
-    <!-- Home Section -->
+    <!-- Home -->
     <section id="home">
+
+        <img src="profile.jpg"
+             alt="Jhanvi Ghag"
+             class="profile-photo">
+
         <h1>Hello, I'm Jhanvi Ghag 👋</h1>
+
         <h2>TY B.Sc. IT Student</h2>
+
         <p>
             Interested in Cyber Security, Artificial Intelligence
             and Data Analytics.
         </p>
+
     </section>
 
-    <!-- About Me Section -->
+    <!-- About Me -->
     <section id="about">
+
         <h2>About Me</h2>
 
         <p>
@@ -249,34 +265,43 @@
             I am interested in exploring new technologies and
             improving my knowledge through practical experience.
         </p>
+
     </section>
 
-    <!-- Separate Education Section -->
+    <!-- Education -->
     <section id="education">
+
         <h2>Education</h2>
 
         <div class="education-card">
+
             <h3>Bachelor of Science in Information Technology</h3>
 
-            <p><strong>College:</strong>
+            <p>
+                <strong>College:</strong>
                 S.I. College of Higher Education
             </p>
 
-            <p><strong>Current Year:</strong>
+            <p>
+                <strong>Current Year:</strong>
                 Third Year (TY B.Sc. IT)
             </p>
 
             <p><strong>FY CGPA:</strong> 8.0</p>
 
             <p><strong>SY SGPA:</strong> 8.09</p>
+
         </div>
+
     </section>
 
-    <!-- Separate Technical Skills Section -->
+    <!-- Technical Skills -->
     <section id="skills">
+
         <h2>Technical Skills</h2>
 
         <div class="skills-container">
+
             <span class="skill">Python</span>
             <span class="skill">Java</span>
             <span class="skill">HTML</span>
@@ -287,61 +312,92 @@
             <span class="skill">Operating Systems</span>
             <span class="skill">Computer Networking</span>
             <span class="skill">Cyber Security</span>
+
         </div>
+
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects -->
     <section id="projects">
+
         <h2>My Projects</h2>
 
         <div class="project-card">
+
             <h3>Password Strength Checker</h3>
+
             <p>
                 A beginner-level Python project that checks
                 password strength using basic validation rules.
             </p>
+
             <p><strong>Technology:</strong> Python</p>
+
             <a href="https://github.com/jhanvi-ghag/Python-Projects"
-               target="_blank">View on GitHub</a>
+               target="_blank">
+                View on GitHub
+            </a>
+
         </div>
 
         <div class="project-card">
+
             <h3>Phishing URL Detector</h3>
+
             <p>
                 A basic Python project that checks URLs for
                 suspicious patterns to support phishing awareness.
             </p>
+
             <p><strong>Technology:</strong> Python</p>
+
             <a href="https://github.com/jhanvi-ghag/Python-Projects"
-               target="_blank">View on GitHub</a>
+               target="_blank">
+                View on GitHub
+            </a>
+
         </div>
 
         <div class="project-card">
+
             <h3>CyberSafe Website</h3>
+
             <p>
                 A cybersecurity awareness website with features
                 such as quizzes, password checking, phishing
                 awareness and cybersecurity resources.
             </p>
-            <p><strong>Technologies:</strong>
+
+            <p>
+                <strong>Technologies:</strong>
                 React, Node.js, Express and MongoDB
             </p>
+
         </div>
 
         <div class="project-card">
+
             <h3>Java Student Introduction Program</h3>
+
             <p>
                 A simple Java program that displays student
                 introduction details and academic information.
             </p>
+
             <p><strong>Technology:</strong> Java</p>
+
             <a href="https://github.com/jhanvi-ghag/Java-Projects"
-               target="_blank">View on GitHub</a>
+               target="_blank">
+                View on GitHub
+            </a>
+
         </div>
+
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
     <section id="contact">
+
         <h2>Contact Me</h2>
 
         <p>
@@ -352,14 +408,28 @@
         <p>
             <strong>GitHub:</strong>
             <a href="https://github.com/jhanvi-ghag"
-               target="_blank">Visit My GitHub Profile</a>
+               target="_blank">
+                Visit My GitHub Profile
+            </a>
         </p>
+
+        <p>
+            <strong>LinkedIn:</strong>
+            <a href="YOUR-LINKEDIN-URL"
+               target="_blank">
+                Visit My LinkedIn Profile
+            </a>
+        </p>
+
     </section>
 
     <!-- Footer -->
     <footer>
+
         <p>© 2026 Jhanvi Ghag | Personal Portfolio</p>
+
         <p>Designed with ❤️</p>
+
     </footer>
 
 </body>
