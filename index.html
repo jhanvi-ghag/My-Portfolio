@@ -1,15 +1,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Jhanvi Ghag | Portfolio</title>
+    <title>Jhanvi Ghag | IT Portfolio</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -19,15 +16,13 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #fff5f9;
-            color: #292929;
+            background: #080e1a;
+            color: white;
             line-height: 1.7;
         }
 
-        /* Navigation Bar */
-
         header {
-            background: white;
+            background: #101c30;
             padding: 18px 7%;
             display: flex;
             justify-content: space-between;
@@ -35,481 +30,430 @@
             flex-wrap: wrap;
             position: sticky;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 12px rgba(220, 70, 140, 0.15);
+            z-index: 100;
         }
 
         header h2 {
-            color: #e52d87;
-            font-size: 26px;
-        }
-
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+            color: #00bfff;
         }
 
         nav a {
+            color: white;
             text-decoration: none;
-            color: #292929;
-            font-weight: bold;
-            transition: 0.3s;
+            margin: 10px;
+            font-size: 14px;
         }
 
         nav a:hover {
-            color: #e52d87;
+            color: #00bfff;
         }
-
-        /* Common Sections */
 
         section {
-            max-width: 1100px;
-            margin: 35px auto;
-            padding: 60px 7%;
-            border-radius: 18px;
-            background: white;
-            box-shadow: 0 5px 20px rgba(220, 70, 140, 0.10);
-            scroll-margin-top: 100px;
+            padding: 65px 10%;
         }
 
-        section h2 {
-            color: #e52d87;
-            font-size: 29px;
-            margin-bottom: 22px;
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
         }
 
-        h3 {
-            color: #c91f70;
+        .profile {
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #00bfff;
+            box-shadow: 0 0 25px #0077ff;
+        }
+
+        .hero-content {
+            max-width: 550px;
+        }
+
+        .hero h1 {
+            font-size: 43px;
             margin-bottom: 10px;
         }
 
-        /* Home Section */
-
-        #home {
-            background: #ffe3f0;
-            text-align: center;
-            padding: 100px 7%;
-            margin-top: 28px;
+        .hero h1 span {
+            color: #00bfff;
         }
 
-        #home h1 {
-            color: #c91f70;
-            font-size: 42px;
-            margin-bottom: 12px;
-        }
-
-        #home h2 {
-            font-size: 25px;
+        .hero h3 {
+            color: #00bfff;
             margin-bottom: 15px;
         }
 
-        #home p {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        /* Resume Button */
-
-        .resume-button-container {
-            margin-top: 30px;
-        }
-
-        .resume-button {
+        .btn {
             display: inline-block;
-            background: #e52d87;
+            background: #008cff;
             color: white;
-            padding: 13px 28px;
-            border-radius: 30px;
+            padding: 11px 23px;
+            border-radius: 7px;
             text-decoration: none;
-            font-weight: bold;
+            margin: 15px 8px 0 0;
             transition: 0.3s;
         }
 
-        .resume-button:hover {
-            background: #bd1d68;
+        .btn:hover {
+            background: #005bbb;
             transform: translateY(-3px);
         }
 
-        /* About Section */
+        .section-title {
+            text-align: center;
+            color: #00bfff;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
 
-        #about p {
+        .content-box {
+            background: #111e33;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #203c60;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        .content-box p {
             font-size: 17px;
         }
 
-        /* Education Section */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
 
-        .education-card {
-            background: #fff3f8;
+        .card {
+            background: #111e33;
+            border: 1px solid #203c60;
             padding: 25px;
-            border-left: 5px solid #e52d87;
-            border-radius: 12px;
-            margin-top: 15px;
+            border-radius: 13px;
+            transition: 0.3s;
         }
 
-        .education-card p {
-            margin: 7px 0;
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #00bfff;
         }
 
-        /* Skills Section */
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
+        .card h3 {
+            color: #00bfff;
+            margin-bottom: 12px;
         }
 
-        .skill {
-            background: #ffe3f0;
-            color: #bd1d68;
-            padding: 11px 22px;
-            border-radius: 25px;
-            font-weight: bold;
+        ul {
+            padding-left: 25px;
         }
 
-        /* Projects Section */
-
-        .project-card {
-            background: #fff3f8;
-            padding: 24px;
-            border-radius: 12px;
-            margin: 18px 0;
-            border-left: 5px solid #e52d87;
-        }
-
-        .project-card p {
+        li {
             margin: 8px 0;
         }
 
-        .project-card a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #d52278;
-            font-weight: bold;
+        .contact-links a {
+            color: #00bfff;
             text-decoration: none;
         }
-
-        .project-card a:hover {
-            text-decoration: underline;
-        }
-
-        /* Contact Section */
-
-        #contact p {
-            margin: 12px 0;
-        }
-
-        #contact a {
-            color: #d52278;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Footer */
 
         footer {
             text-align: center;
-            padding: 25px;
-            background: #ffe3f0;
-            color: #8d2455;
-            margin-top: 40px;
+            background: #101c30;
+            padding: 22px;
+            color: #aaa;
         }
 
-        /* Mobile Responsive */
-
-        @media (max-width: 700px) {
-
+        @media(max-width: 650px) {
             header {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav {
                 justify-content: center;
                 gap: 12px;
             }
 
-            nav a {
-                font-size: 14px;
+            nav {
+                text-align: center;
             }
 
-            #home h1 {
-                font-size: 30px;
+            nav a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .hero {
+                text-align: center;
+                padding-top: 45px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
             }
 
             section {
-                margin: 20px 12px;
-                padding: 35px 7%;
+                padding: 45px 6%;
             }
-
         }
-
     </style>
-
 </head>
 
 <body>
 
-    <!-- Navigation Bar -->
+<header>
+    <h2>Jhanvi Ghag</h2>
 
-    <header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#learning">Learning</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-        <h2>Jhanvi Ghag</h2>
+<!-- HOME SECTION -->
+<section class="hero" id="home">
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <img src="profile.jpg" alt="Jhanvi Ghag Profile Photo" class="profile">
 
-    </header>
+    <div class="hero-content">
+        <h3>Hello, Welcome to My Portfolio!</h3>
 
+        <h1>I'm <span>Jhanvi Ghag</span></h1>
 
-    <!-- Home Section -->
-
-    <section id="home">
-
-        <h1>Hello, I'm Jhanvi Ghag 👋</h1>
-
-        <h2>TY B.Sc. IT Student</h2>
-
-        <p>
-            Interested in Cyber Security, Artificial Intelligence
-            and Data Analytics.
-        </p>
+        <h3>TY B.Sc. Information Technology Student</h3>
 
         <p>
-            Passionate about technology, programming and continuous learning.
+            Passionate about technology, Cyber Security,
+            Data Analysis and Artificial Intelligence.
+            I enjoy learning new technologies and developing
+            my technical skills.
         </p>
 
-        <!-- Download Resume Button -->
+        <a href="JhanviGhag.Resume.pdf" class="btn" target="_blank">
+            View My Resume
+        </a>
 
-        <div class="resume-button-container">
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
 
-            <a href="JhanviGhag.Resume.pdf"
-               target="_blank"
-               class="resume-button">
+</section>
 
-                Download My Resume
+<!-- ABOUT ME -->
+<section id="about">
 
-            </a>
+    <h2 class="section-title">About Me</h2>
 
-        </div>
-
-    </section>
-
-
-    <!-- About Me -->
-
-    <section id="about">
-
-        <h2>About Me</h2>
-
+    <div class="content-box">
         <p>
-            I am a Third Year B.Sc. IT student passionate about
-            technology, programming and cybersecurity. I enjoy
-            learning new technical skills and developing projects.
-            I am interested in exploring new technologies and
-            improving my knowledge through practical experience.
+            I am Jhanvi Ghag, a TY B.Sc. Information Technology
+            student interested in exploring the world of technology.
+            I have an interest in Cyber Security, Data Analysis,
+            Artificial Intelligence and Web Development.
+
+            I enjoy working on projects, learning programming
+            languages and improving my problem-solving abilities.
+            I am looking forward to gaining practical experience
+            and starting my professional IT career.
         </p>
+    </div>
 
-    </section>
+</section>
 
+<!-- EDUCATION -->
+<section id="education">
 
-    <!-- Education -->
+    <h2 class="section-title">My Education</h2>
 
-    <section id="education">
+    <div class="grid">
 
-        <h2>Education</h2>
-
-        <div class="education-card">
-
-            <h3>Bachelor of Science in Information Technology</h3>
-
-            <p>
-                <strong>College:</strong>
-                S.I. College of Higher Education
-            </p>
-
-            <p>
-                <strong>Current Year:</strong>
-                Third Year (TY B.Sc. IT)
-            </p>
-
-            <p><strong>FY CGPA:</strong> 8.0</p>
-
-            <p><strong>SY SGPA:</strong> 8.09</p>
-
+        <div class="card">
+            <h3>B.Sc. Information Technology</h3>
+            <p>Currently pursuing Third Year (TY B.Sc. IT).</p>
         </div>
 
-    </section>
-
-
-    <!-- Technical Skills -->
-
-    <section id="skills">
-
-        <h2>Technical Skills</h2>
-
-        <div class="skills-container">
-
-            <span class="skill">Python</span>
-            <span class="skill">Java</span>
-            <span class="skill">HTML</span>
-            <span class="skill">CSS</span>
-            <span class="skill">JavaScript</span>
-            <span class="skill">SQL</span>
-            <span class="skill">MongoDB</span>
-            <span class="skill">Operating Systems</span>
-            <span class="skill">Computer Networking</span>
-            <span class="skill">Cyber Security</span>
-
+        <div class="card">
+            <h3>Academic Performance</h3>
+            <p>FY CGPA: 8.0</p>
+            <p>SY CGPA: 8.09</p>
         </div>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- Projects -->
+<!-- SKILLS -->
+<section id="skills">
 
-    <section id="projects">
+    <h2 class="section-title">My Technical Skills</h2>
 
-        <h2>My Projects</h2>
+    <div class="grid">
 
-
-        <div class="project-card">
-
-            <h3>Password Strength Checker</h3>
-
-            <p>
-                A beginner-level Python project that checks
-                password strength using basic validation rules.
-            </p>
-
-            <p><strong>Technology:</strong> Python</p>
-
-            <a href="https://github.com/jhanvi-ghag/Python-Projects"
-               target="_blank">
-
-                View on GitHub
-
-            </a>
-
+        <div class="card">
+            <h3>Programming</h3>
+            <p>Python, Java, C#</p>
         </div>
 
-
-        <div class="project-card">
-
-            <h3>Phishing URL Detector</h3>
-
-            <p>
-                A basic Python project that checks URLs for
-                suspicious patterns to support phishing awareness.
-            </p>
-
-            <p><strong>Technology:</strong> Python</p>
-
-            <a href="https://github.com/jhanvi-ghag/Python-Projects"
-               target="_blank">
-
-                View on GitHub
-
-            </a>
-
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, React</p>
         </div>
 
+        <div class="card">
+            <h3>Database</h3>
+            <p>SQL, MongoDB</p>
+        </div>
 
-        <div class="project-card">
+        <div class="card">
+            <h3>Tools & Technologies</h3>
+            <p>Visual Studio, VS Code, NetBeans, GitHub</p>
+        </div>
 
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <div class="grid">
+
+        <div class="card">
             <h3>CyberSafe Website</h3>
-
             <p>
-                A cybersecurity awareness website with features
-                such as quizzes, password checking, phishing
-                awareness and cybersecurity resources.
+                A cybercrime awareness website designed to
+                educate users about online safety, phishing,
+                password security and cybercrime prevention.
             </p>
-
-            <p>
-                <strong>Technologies:</strong>
-                React, Node.js, Express and MongoDB
-            </p>
-
+            <p><strong>Technologies:</strong> React, Node.js,
+            Express.js, MongoDB.</p>
         </div>
 
-
-        <div class="project-card">
-
-            <h3>Java Student Introduction Program</h3>
-
+        <div class="card">
+            <h3>My Portfolio Website</h3>
             <p>
-                A simple Java program that displays student
-                introduction details and academic information.
+                A personal portfolio website showcasing my
+                education, technical skills, projects and
+                career interests.
             </p>
-
-            <p><strong>Technology:</strong> Java</p>
-
-            <a href="https://github.com/jhanvi-ghag/Java-Projects"
-               target="_blank">
-
-                View on GitHub
-
-            </a>
-
+            <p><strong>Technologies:</strong> HTML, CSS,
+            GitHub Pages.</p>
         </div>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- Contact -->
+<!-- CURRENTLY LEARNING -->
+<section id="learning">
 
-    <section id="contact">
+    <h2 class="section-title">Currently Learning</h2>
 
-        <h2>Contact Me</h2>
+    <div class="grid">
 
+        <div class="card">
+            <h3>Cyber Security</h3>
+            <p>Learning cybersecurity concepts, online threats
+            and security practices.</p>
+        </div>
+
+        <div class="card">
+            <h3>Python & Java</h3>
+            <p>Improving programming knowledge and
+            problem-solving skills.</p>
+        </div>
+
+        <div class="card">
+            <h3>Web Development</h3>
+            <p>Exploring frontend and backend development
+            technologies.</p>
+        </div>
+
+        <div class="card">
+            <h3>Data Analysis & AI</h3>
+            <p>Exploring data analysis techniques and
+            artificial intelligence concepts.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CAREER OBJECTIVE -->
+<section id="career">
+
+    <h2 class="section-title">Career Objective</h2>
+
+    <div class="content-box">
         <p>
-            I am interested in learning, internships and
-            opportunities in the IT field.
+            To begin my professional journey in the IT industry
+            by applying my technical knowledge, gaining practical
+            experience and continuously learning new technologies.
+            I aspire to develop my career in Cyber Security,
+            Data Analysis and Artificial Intelligence.
+        </p>
+    </div>
+
+</section>
+
+<!-- MY GOALS -->
+<section id="goals">
+
+    <h2 class="section-title">My Career Goals</h2>
+
+    <div class="content-box">
+        <ul>
+            <li>Gain practical experience through internships.</li>
+            <li>Develop strong technical and programming skills.</li>
+            <li>Explore opportunities in Cyber Security and AI.</li>
+            <li>Improve my knowledge through real-world projects.</li>
+            <li>Build a successful career in the IT industry.</li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="content-box contact-links">
+
+        <p><strong>Name:</strong> Jhanvi Ghag</p>
+
+        <p><strong>Email:</strong>
+            <a href="mailto:YOUR_EMAIL@gmail.com">
+                YOUR_EMAIL@gmail.com
+            </a>
         </p>
 
-        <p>
-            <strong>GitHub:</strong>
-
+        <p><strong>GitHub:</strong>
             <a href="https://github.com/jhanvi-ghag"
-               target="_blank">
-
-                Visit My GitHub Profile
-
-            </a>
-
+               target="_blank">Visit My GitHub</a>
         </p>
 
-        <p>
-            <strong>LinkedIn:</strong>
-
-            <a href="YOUR-LINKEDIN-URL"
-               target="_blank">
-
-                Visit My LinkedIn Profile
-
-            </a>
-
+        <p><strong>LinkedIn:</strong>
+            <a href="YOUR_LINKEDIN_URL"
+               target="_blank">Visit My LinkedIn</a>
         </p>
 
-    </section>
+    </div>
 
+</section>
 
-    <!-- Footer -->
-
-    <footer>
-
-        <p>© 2026 Jhanvi Ghag | Personal Portfolio</p>
-
-        <p>Designed with ❤️</p>
-
-    </footer>
+<footer>
+    <p>© 2026 Jhanvi Ghag | Personal Portfolio</p>
+    <p>Designed with passion for technology.</p>
+</footer>
 
 </body>
-
 </html>
